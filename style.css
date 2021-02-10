@@ -378,7 +378,7 @@ top: 1445px;left: 540px;}
 
     }
 
-[class*="btn-"]:hover{color: #2c71b8;
+[class*="btn-"]:hover{color: rgba(44, 113, 184, 255);
     background-color:rgba(255, 255, 255, 0.75)
 
 }
