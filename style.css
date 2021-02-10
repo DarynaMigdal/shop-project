@@ -19,7 +19,8 @@ body {
 
 .row:after,
 .menu:after,
-.menu-bar:after {
+.menu-bar:after,
+.breadcrums ::after {
     content: "";
     clear: both;
     display: block;
@@ -31,7 +32,7 @@ body {
 
 }
 
-[class*="col-"] {
+[class*="col-md"] {
     float: left;
     padding-right: 15px;
     padding-left: 15px;
@@ -43,6 +44,18 @@ body {
 
 .col-md-6 {
     width: 50%;
+}
+.col-md-9 {
+    width: 75%;
+}
+.col-md-12{
+width: 100%;
+}
+.col-md-4{
+    width: 33.3%;
+}
+.col-md-8{
+    width: 66.7%;
 }
 
 .header {
@@ -84,9 +97,7 @@ body {
 }
 
 
-.col-md-9 {
-    width: 75%;
-}
+
 
 .form-search {
 
@@ -149,20 +160,28 @@ input[type=button] {
     position: absolute;
     top: -10px;
     left: -10px;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 .products {
-    background-image: url(images/arrow-down.png);
+    background-image: url(images/arrow-down-1.png);
     background-repeat: no-repeat;
     background-position: 120px 20px;
 }
 
+.menu > li:hover>a.products{
+    background: #2c71b8;
+    color: white;
+    background-image: url(images/arrow-down.png); 
+    background-repeat: no-repeat;
+    background-position: 120px 20px;
+   
+}
 .menu-bar {
     visibility: hidden;
     list-style-type: none;
     position: absolute;
-
-
 }
 
 .menu-bar li {
@@ -193,82 +212,48 @@ input[type=button] {
     visibility: visible;
 }
 
-.menu-bar li:hover .menu li a .products {
-    color: #2c71b8;
-    background-color: white;
-}
-
-.container-two {
-    width: 1200px;
-    height: 2333px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-.pages,
-.pages a {
+.breadcrums li{
+    float: left;
     margin-top: 50px;
     font-size: 14px;
     font-weight: 300;
     color: #9ebddc;
-
+   
+    
 }
+ .breadcrums a {
+    color: #9ebddc;
+ }
 
-.title {
+.Laptops-and-tablets{
     color: white;
     font-size: 48px;
     font-weight: bold;
     margin-top: 30px;
 }
-
-.device-one {
+.product{
+   
     width: 270px;
-    height: 650px;
-    margin-top: 60px;
+    height: 670px;
+    margin-top: 25px;
+    border:  rgba(202, 219, 237, 255) 1px solid;
+    background-color: rgba(44, 113, 184, 255);
 }
-.device-two , .device-three{
+.product-image{
+    height: 175px;
     width: 270px;
-    height: 650px;
-    margin-top: 60px;
-}
-
-.laptop-one {
-    width: 270px;
-    height: 180px;
     background-color: rgba(202, 219, 237, 255);
+    text-align: center;
     position: relative;
-    background-image: url(images/laptop.one.png);
-    background-repeat: no-repeat;
-    background-position: 85px 45px;
-
+    
 }
-
-.laptop-two {
-    width: 270px;
-    height: 180px;
-    background-color: rgba(202, 219, 237, 255);
-    position: relative;
-    background-image: url(images/icon-16.png);
-    background-repeat: no-repeat;
-    background-position: 85px 60px;
-
+.device{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.laptop-three {
-    width: 270px;
-    height: 180px;
-    background-color: rgba(202, 219, 237, 255);
-    position: relative;
-    background-image: url(images/icon-15.png);
-    background-repeat: no-repeat;
-    background-position: 100px 40px;}
-
-.laptop-one-select,
-.laptop-two-select,
-.laptop-three-select {
+[class*="icon-light"]{
     position: absolute;
     top: 15px;
     left: 230px;
@@ -279,10 +264,13 @@ input[type=button] {
     background-repeat: no-repeat;
     background-position: 4px 4px;
 }
-
-.laptop-one-like,
-.laptop-two-like,
-.laptop-three-like {
+.icon-light-three{
+    background-color: #2c71b8;
+    background-image: url(images/icon6.png);
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+}
+[class*="icon-like"]{
     position: absolute;
     top: 50px;
     left: 230px;
@@ -293,118 +281,104 @@ input[type=button] {
     background-repeat: no-repeat;
     background-position: 5px 5px;
 }
-
-
-.laptop-one-info,
-.laptop-two-info,
-.laptop-three-info{
-    color: white;
-    background-color: rgba(44, 113, 184, 255);
-    width: 270px;
-    height: 500px;
-    border: rgba(202, 219, 237, 255) solid 1px;
+.icon-like-two{
+    background-color: #2c71b8;
+    background-image: url(images/icon-7.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
 }
-
-.laptop-one-tittle,
-.laptop-two-tittle,
-.laptop-three-tittle {
+.product-tittle{
+    color: white;
     text-align: left;
     margin: 23px;
     font-size: 30px;
     font-weight: bold;
 }
-
-.laptop-one-desc ,
-.laptop-two-desc  ,
-.laptop-three-desc {
+.product-desc {
+    color: white;
     font-size: 21px;
     font-weight: lighter;
     margin: 20px;
 }
-
-.laptop-one-type span,
-.laptop-one-size span,
-.laptop-one-ram span,
-.laptop-two-type span,
-.laptop-two-size span,
-.laptop-two-ram span,
-.laptop-three-type span,
-.laptop-three-size span,
-.laptop-three-ram span {
-
+.product-feature li{
+    color: white;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.product-feature span {
     font-size: 21px;
     font-weight: bold;
-
-
 }
-
-.laptop-one-type,
-.laptop-one-size,
-.laptop-one-ram,
-.laptop-two-type,
-.laptop-two-size,
-.laptop-two-ram ,
-.laptop-three-type,
-.laptop-three-size,
-.laptop-three-ram{
-    font-size: 21px;
-    font-weight: lighter;
-    margin: 20px;
-
-}
-
-.laptop-one-price,
-.laptop-two-price,
-.laptop-three-price {
-    text-align: center;
+.product-price{
+    color: white;
+    margin-top: 20px;
     font-size: 48px;
     font-weight: bold;
+}.full-price{
+    margin-left: 50px;
+    position: relative;
 }
+[class*="half-price"]{
+    font-size: 24px;
+    width: 25px;height: 25px;
+    position: absolute;
+    
+}
+.half-price-one{
+    top: 750px;left: 540px;
+}
+.half-price-two{ 
+    top: 750px;left: 875px;
+}
+.half-price-three{
+    top: 750px;left: 1155px;
+}
+.half-price-four{
+top: 1445px;left: 540px;}
 
-.button-one,
-.button-one-2-0 ,
-.button-one-3-0{
+.half-price-five{
+    top: 1445px;left: 875px;}
+
+ .half-price-six{
+    top: 1445px;left: 1155px;}
+
+.half-price-seven{
+    top: 2140px;left: 540px;}
+
+    .half-price-eight{
+   top: 2140px;left: 875px;}
+
+   .half-price-nine{
+    top: 2140px;left: 1155px;}
+
+[class*="btn-"]{   
+ appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
     width: 210px;
     height: 50px;
     font-size: 21px;
     font-weight: bold;
-    margin-left: 30px;
     color: white;
-    background-color: rgba(44, 113, 184, 255);
-    border: solid 2px white;
-    margin-top: 25px;
-    margin-bottom: 15px;
+   margin-bottom: 5px;
+    margin-left: 30px;
 }
 
-.laptop-one-add ,
-.laptop-two-add ,
-.laptop-three-add{
-    width: 210px;
-    height: 50px;
-    font-size: 21px;
-    font-weight: bold;
-    margin-left: 30px;
-    background-color: rgba(86, 141, 198, 255);
-    border: solid 2px white;
-    background-image: url(images/icon\ -2.png);
+    .btn-btn-more-details {
+        margin-top: 10px;
+        border: white 1px solid;
+        
+    }
+    .btn-btn-add{
+        background-color:rgba(86, 141, 198, 0.75);
+        background-image: url(images/icon\ -2.png);
     background-repeat: no-repeat;
-    background-position: 185px 15px;
-}
+    background-position: 175px 15px;
 
-.button-two,
-.button-two-2-0,
-.button-two-3-0 {
-    width: 210px;
-    height: 50px;
-    font-size: 21px;
-    font-weight: bold;
-    color: white;
-    border: transparent;
-    background-color: transparent;
-    margin-left: -10px;
-}
+    }
 
-button:focus {
-    outline: none
-}
+[class*="btn-"]:hover{color: #2c71b8;
+    background-color:rgba(255, 255, 255, 0.75)
 
+}
