@@ -20,7 +20,8 @@ body {
 .row:after,
 .menu:after,
 .menu-bar:after,
-.breadcrums ::after {
+.breadcrums ::after 
+{
     content: "";
     clear: both;
     display: block;
@@ -182,6 +183,7 @@ input[type=button] {
     visibility: hidden;
     list-style-type: none;
     position: absolute;
+    z-index: 100;
 }
 
 .menu-bar li {
@@ -365,7 +367,7 @@ top: 1445px;left: 540px;}
     margin-left: 30px;
 }
 
-    .btn-btn-more-details {
+    .btn-btn-more-details  {
         margin-top: 10px;
         border: white 1px solid;
         
@@ -379,6 +381,61 @@ top: 1445px;left: 540px;}
     }
 
 [class*="btn-"]:hover{color: rgba(44, 113, 184, 255);
-    background-color:rgba(255, 255, 255, 0.75)
+    background-color:rgba(255, 255, 255, 0.75);
+    cursor: pointer;
 
+}
+.filter{
+    width: 270px;
+    height: 835px;
+    background-color: rgba(86, 141, 198, 0.78);
+    border-right : 1px solid white;
+    border-top : 1px solid white;
+    margin-top: 50px;
+}
+.filter-tittle{
+    margin-top: 40px;
+    margin-left: 25px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+
+}
+
+.select{
+    margin-left: 25px;
+    margin-top: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+}.checkbox-input {
+    display: none;
+    
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+    background-color: white;
+    
+}
+
+.checkbox-label::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+    
+
+.select li {
+    margin-bottom: 25px;
+}
+
+.btn-submit{
+    margin-top: 30px;
+    margin-left: 0px;
+    border: white 1px solid;
+    background-color: #2d71b8;
 }
